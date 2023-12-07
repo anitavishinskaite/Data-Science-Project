@@ -4,11 +4,9 @@ The goal of the project is to develop a software that enables one to process dat
 
 ## Data
 
-Exemplar data for testing the project have been made available. In particular:
+* there are CSV files with [annotations](data/annotations.csv) and [metadata](data/metadata.csv), containing annotations describing images and including metadata of IIIF objects, i.e. collections, manifests and canvases.
 
-* for creating the relational database, there are two files, two CSV files with [annotations](data/annotations.csv) and [metadata](data/metadata.csv), containing annotations describing images and including metadata of IIIF objects, i.e. collections, manifests and canvases (please note that multiple creators of the same object will be contained in just one string and split by `; `);
-
-* for creating the RDF triplestore, there are two files, [a JSON file](data/collection-1.json) containing the IIIF collection "Works of Dante Alighieri" and [another JSON file](data/collection-2.json) containing the IIIF collection "Fondo Giuseppe Raimondi". Each collection contains information of the other IIIF entities (i.e. manifests and canvases): their identifiers, types, labels, and containement relations.
+* there are two files, [a JSON file](data/collection-1.json) containing the IIIF collection "Works of Dante Alighieri" and [another JSON file](data/collection-2.json) containing the IIIF collection "Fondo Giuseppe Raimondi". Each collection contains information of the other IIIF entities (i.e. manifests and canvases): their identifiers, types, labels, and containement relations.
 
 ## Workflow
 
@@ -22,14 +20,9 @@ Exemplar data for testing the project have been made available. In particular:
 
 ![Data model classes](img/datamodel-uml.png)
 
-All the methods of each class must return the appropriate value that have been specified in the object of that class when it has been created. It is up to the implementer to decide how to enable someone to add this information to the object of each class, e.g. by defining a specific constructor. While one can add additional methods to each class if needed, it is crucial that the *get* methods introduced in the UML diagram are all defined.
-
 ## UML of additional classes
 
 ![Data model classes](img/classes-uml.png)
-
-All the attributes methods of each class are defined as follows. All the constructors of each of the class introduced in the UML diagram do not take in input any parameter. While one can add additional methods to each class if needed, it is crucial that all the methods introduced in the UML diagram are defined.
-
 
 ### Class `Processor`
 
